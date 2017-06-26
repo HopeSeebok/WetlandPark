@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E6E6E8">
+
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_15"
+        android:paddingTop="@dimen/margin_15">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/account_str"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16" />
+
+            <EditText
+                android:id="@+id/account_verify_account_edit"
+                style="@style/common_edit"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toLeftOf="@+id/account_close_ib"
+                android:singleLine="true"
+                android:layout_toRightOf="@+id/account"
+                android:textColor="@color/black"
+                android:hint="@string/account_hint"/>
+
+            <ImageButton
+                android:id="@+id/account_verify__close_ib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:background="@color/white"
+                android:src="@mipmap/close_circle_icon"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View style="@style/line_1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/pwd_str"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16" />
+
+            <EditText
+                android:id="@+id/account_verify_code_et"
+                style="@style/common_edit"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toLeftOf="@+id/pwd_close_ib"
+                android:layout_toRightOf="@+id/pwd"
+                android:hint="@string/verify_code_hint"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/account_verify_code_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="35dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:text="25684"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_13"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:background="@color/line" />
+        </RelativeLayout>
+
+        <View style="@style/line_1"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/account_verify_next_btn"
+            style="@style/common_btn"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@drawable/btn_press"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone"
+            android:text="@string/next_str" />
+
+    </LinearLayout>
+
+</RelativeLayout>

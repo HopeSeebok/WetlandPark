@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/event_record_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/common_tital_bar_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="上报"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_15" />
+    </RelativeLayout>
+
+    <View style="@style/line_1" />
+
+    <EditText
+        android:id="@+id/event_record_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FBFBFB"
+        android:hint="输入上报描述..."
+        android:padding="@dimen/margin_10" />
+
+    <View style="@style/line_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/event_record_photo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:drawablePadding="@dimen/margin_3"
+            android:drawableTop="@mipmap/photo_icon"
+            android:gravity="center"
+            android:text="拍照"
+            android:textColor="@color/btn_purple"
+            android:textSize="@dimen/text_size_15" />
+
+
+        <GridView
+            android:id="@+id/event_record_photo_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:listSelector="@color/transparency"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_5">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/location"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:textSize="@dimen/text_size_15"
+            android:drawablePadding="@dimen/margin_5"
+            android:text="上报位置:"/>
+
+        <TextView
+            android:id="@+id/event_record_location_change_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更改位置"
+            android:textColor="@color/btn_purple"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/text_size_15"/>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:text="立即上报"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16"
+        android:background="@color/btn_purple"/>
+
+</LinearLayout>

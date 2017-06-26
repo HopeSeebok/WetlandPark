@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:item="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_5">
+
+
+        <TextView
+            android:id="@+id/formCheckBoxSelector_title_tv"
+            android:paddingBottom="@dimen/margin_8"
+            android:paddingTop="@dimen/margin_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:text="名称名称:"
+            android:minWidth="@dimen/formItemNameWidth"
+            android:textSize="@dimen/text_size_16" />
+
+        <com.yunwei.wetlandpark.widget.SwitchButtonV2
+            android:id="@+id/formCheckBoxSelector_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/gray"
+            item:kswTintColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/formCheckBoxSelector_title_tv_note"
+            android:paddingBottom="@dimen/margin_8"
+            android:paddingTop="@dimen/margin_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/formCheckBoxSelector_title_tv"
+            android:layout_toLeftOf="@id/formCheckBoxSelector_checkBox"
+            android:text="备注"
+            android:textSize="@dimen/text_size_10" />
+
+    </RelativeLayout>
+
+    <View style="@style/line_1"
+        android:layout_marginLeft="@dimen/margin_20"/>
+</LinearLayout>

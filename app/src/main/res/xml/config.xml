@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    配置文件使用说明:
+	配置参数分为TAG标签之前、TAG标签内、TAG标签后三部分
+	TAG标签前的参数：一般用于一些默认参数配置，若TAG标签之前有一参数与TAG标签内的参数同名，则会选择取TAG标签之内参数的值
+	TAG标签内的参数：在TAG标签内配置的参数受限于“CONFIG_TAG”的选择，该值选择哪个TAG环境标签，则对应的参数会生效
+	TAG标签后的参数：一般用于配置与环境无关的配置参数，不管“CONFIG_TAG”选择的是哪个环境，是否与TAG标签内的参数重名，TAG标签后的参数最有优先权
+
+	注：若TAG标签前、TAG标签内、TAG标签后配置的相同的参数名，则这三个位置的参数的优先顺序为 TAG标签后->TAG标签内->TAG标签前
+
+	即：若TAG标签前配置<LOG_LEVEL value="v" />；TAG标签内配置<LOG_LEVEL value="d" />；TAG标签后配置<LOG_LEVEL value="w" />；则LOG_LEVEL最终的值为w
+	          若TAG标签前配置<LOG_LEVEL value="v" />；TAG标签内配置<LOG_LEVEL value="d" />；TAG标签后没有配置LOG_LEVEL标签；则LOG_LEVEL最终的值为d
+	          若TAG标签前配置<LOG_LEVEL value="v" />；TAG标签内和TAG标签后都没有配置LOG_LEVEL标签；则LOG_LEVEL最终的值为a
+	          若TAG标签前、TAG标签内和TAG标签后都没有配置LOG_LEVEL标签；则LOG_LEVEL最终的值为null
+
+	该xml配置文件由com.yunwei.zaina.utils.config.IConfig类解析；需要在应用启动的位置调用初始化方法IConfig.init(context)解析该配置文件；
+	在项目中需要取出该配置文件的方法为如：String value = IConfig.getConfig("LOG_LEVEL");若LOG_LEVEL没有在此配置文件中定义，则value值为null
+-->
+<config>
+    <!-- prd：正式环境  dev：开发环境  uat:测试环境-->
+    <CURRENT_ENV value="dev" />
+
+    <!--正式环境-->
+    <TAG name="prd">
+        <DOMAIN value="http://sszx.wayto.com.cn:8081/" />
+
+        <!--日志开关-->
+        <LOG_SWITCH value="false" />
+
+        <!--Crash开关-->
+        <CRASH_SWITCH value="true" />
+    </TAG>
+
+    <!--开发环境-->
+    <TAG name="dev">
+        <DOMAIN value="http://10.10.10.182/" />
+
+        <!--日志开关-->
+        <LOG_SWITCH value="true" />
+
+        <!--Crash开关-->
+        <CRASH_SWITCH value="false" />
+    </TAG>
+
+    <!--测试环境-->
+    <TAG name="uat">
+        <DOMAIN value="http://120.24.152.97:8021/" />
+
+        <!--日志开关-->
+        <LOG_SWITCH value="true" />
+
+        <!--Crash开关-->
+        <CRASH_SWITCH value="false" />
+    </TAG>
+
+    <!--高德Key-->
+    <GAODE_KEY value="396b9fe083c4dd2a5b99cfc395ee9f3e"/>
+
+    <!--登录-->
+    <LOGIN_URL value="token" />
+
+    <!--用户签到签退-->
+    <USER_SIGN_URL value="v1/user/Sign"/>
+
+    <!--七牛Token Url-->
+    <QINIU_TOKEN_URL value="v2/config/qiniu_token" />
+
+    <!--图层-->
+    <MAP_FEATURE_URL value="http://116.7.249.34:6080/arcgis/rest/services/BaAppNew/FeatureServer/"/>
+
+    <!--图层查询-->
+    <MAP_LAYER_SEARCH_URL value="http://116.7.249.34:6080/arcgis/rest/services/BaAppNew/MapServer" />
+
+    <!--修改用户信息-->
+    <UPDATE_USER_INFO_URL value="v2/user/"/>
+
+    <!--修改用户密码-->
+    <UPDATE_USER_PWD_URL value="v2/account/changepwd/"/>
+
+    <!--刷新位置-->
+    <REFRESH_LOCATION value="v1/user/refreshLocation" />
+
+    <!--获取设施信息 By RFID-->
+    <DEVICE_INFO_BY_RFID value="v2/device?rfid=" />
+
+    <!--获取设施信息 By guId-->
+    <DEVICE_INFO_BY_GUID value="v1/device/rq/" />
+
+    <!--获取设施信息 By id-->
+    <DEVICE_INFO_BY_ID value="v1/device/"/>
+
+    <!--版本检测 -->
+    <UPDATE_VERSION_URL value="v1/ver" />
+
+    <!--逆地理编码-->
+    <REVERSE_GEO_CODIN value="http://restapi.amap.com/v3/geocode/regeo?"/>
+
+    <!--配制文件-->
+    <CONFIG_URL value="v1/user/config"/>
+
+    <!--足迹上传-->
+    <TRACK_UPLOAD_URL value="v1/footprint"/>
+
+    <!--足迹详情-->
+    <TRACK_DETAIL_URL value="v1/footprint/"/>
+
+    <!--足迹查询 by data-->
+    <TRACK_QUERY_BY_DATA value="v1/footprint?date="/>
+
+    <!--新增设施-->
+    <NEW_FAC value="v1/device" />
+
+    <!--获取派出所-->
+    <GET_OWNER value="v1/device/Owner?areaname=" />
+
+
+    <!--新增工作记录-->
+    <NEW_WORK_RECORD value="v1/workrecord" />
+
+    <CREATE_NEW_DEAL_FORM_HIDDEN_DANGER value="v1/device/hd"/>
+
+    <!--百度鹰眼SERVICEID-->
+    <BD_SERVICE_ID value="126490"/>
+
+    <!--获取隐患类型-->
+    <GET_HIDDEN_DANGER_TYPE value="v1/device/hdfrom"/>
+
+    <!--修改设施信息-->
+    <UPDATE_FACILITY_INFO value="v1/updatedevice"/>
+
+    <!--获取任务详情信息-->
+    <GET_TASKDETAIL_INFO value="v1/WorkTask/"/>
+
+    <!--改变任务状态-->
+    <CHANGE_TASKSTATUS_INFO value="v1/WorkTask"/>
+
+    <!--撤销任务点-->
+    <REVOKE_TASK_POINT value="v1/RevokePoint"/>
+
+    <!--获取隐患详情-->
+    <GET_HD_INFO value="v1/device/hd/"/>
+
+    <!--处理离线消息-->
+    <OFF_LINE_MESSAGE value="v1/user/offLineMsg"/>
+
+    <!--关键字搜索-->
+    <SEARCH_REQUEST value="v1/search?key="/>
+
+    <!--图层更新检测-->
+    <MAP_LAYER_CHECK value="v2/config/mapver"/>
+
+</config>

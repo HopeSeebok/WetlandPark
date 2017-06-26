@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_fac_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_5"
+        android:background="@drawable/item_seletor">
+
+        <ImageView
+            android:id="@+id/iv_item_home_history_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_change_inf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_item_home_history_turn_left"
+            android:layout_toRightOf="@+id/iv_item_home_history_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_item_home_history_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设施类型:"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/tv_item_home_history_createtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_15"
+                android:text="采集时间:" />
+
+            <TextView
+                android:id="@+id/tv_item_home_history_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="采集地址:"
+                android:textColor="@color/gray"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_15"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_item_home_history_turn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/arrow_right" />
+
+        <ImageView
+            android:id="@+id/iv_item_home_history_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_item_home_history_turn_left"
+            android:src="@mipmap/icon_state_unsubmitted" />
+    </RelativeLayout>
+    <View
+        style="@style/line_1"/>
+</LinearLayout>

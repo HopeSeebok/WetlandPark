@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:item="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yunwei.wetlandpark.widget.FormWriteView
+        android:id="@+id/addDeviceFragment_deviceName_wv"
+        style="@style/formItemCommonStyle"
+        item:wvItemName="设施名称" />
+
+    <com.yunwei.wetlandpark.widget.FormWriteView
+        android:id="@+id/addDeviceFragment_deviceCode_wv"
+        style="@style/formItemCommonStyle"
+        item:wvItemName="设施编号" />
+
+    <com.yunwei.wetlandpark.widget.FormSpinnerSelectorView
+        android:id="@+id/addDeviceFragment_deviceType_ssv"
+        style="@style/formItemCommonStyle"
+        item:itemName="设施类型" />
+
+    <com.yunwei.wetlandpark.widget.FormTimeSelectorView
+        android:id="@+id/addDeviceFragment_deviceStartTime_tsv"
+        style="@style/formItemCommonStyle"
+        item:itemName="启用时间" />
+
+    <com.yunwei.wetlandpark.widget.FormTimeSelectorView
+        android:id="@+id/addDeviceFragment_deviceStopTime_tsv"
+        style="@style/formItemCommonStyle"
+        item:itemName="停用时间" />
+
+    <com.yunwei.wetlandpark.widget.FormClickableView
+        android:id="@+id/addDeviceFragment_deviceAddress_cv"
+        style="@style/formItemCommonStyle"
+        item:itemName="存放地点" />
+
+    <com.yunwei.wetlandpark.widget.FormWriteView
+        android:id="@+id/addDeviceFragment_useDepartment_wv"
+        style="@style/formItemCommonStyle"
+        item:wvItemName="使用部门" />
+
+    <com.yunwei.wetlandpark.widget.FormWriteView
+        android:id="@+id/addDeviceFragment_specModel_wv"
+        style="@style/formItemCommonStyle"
+        item:wvItemName="规格型号" />
+
+    <FrameLayout
+        android:id="@+id/addDeviceFragment_imgPicker_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

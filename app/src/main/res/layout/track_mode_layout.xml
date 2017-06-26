@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mode_walk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_seletor"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:text="步行"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+
+        <View style="@style/line_1" />
+
+        <TextView
+            android:id="@+id/mode_riding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_seletor"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:text="骑行"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+
+        <View style="@style/line_1" />
+
+        <TextView
+            android:id="@+id/mode_drive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_seletor"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:text="驾驶"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+
+        <View style="@style/line_1" />
+    </LinearLayout>
+
+</LinearLayout>

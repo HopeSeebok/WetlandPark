@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparency"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/pop_empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/pop_btn_layout" />
+
+    <LinearLayout
+        android:id="@+id/pop_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/pop_title_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18" />
+
+                <ImageView
+                    android:id="@+id/pop_close_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/common_close_bar" />
+            </RelativeLayout>
+
+            <View style="@style/line_1" />
+
+            <GridView
+                android:id="@+id/pop_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:listSelector="@drawable/item_seletor"
+                android:numColumns="4" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

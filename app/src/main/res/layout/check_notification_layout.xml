@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/notification_workstate_background">
+
+    <TextView
+        android:id="@+id/title_notification_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/head_title_notification_height"
+        android:paddingTop="@dimen/margin_1"
+        android:paddingBottom="@dimen/margin_1"
+        android:drawableLeft="@mipmap/notice"
+        android:paddingLeft="@dimen/margin_13"
+        android:drawablePadding="@dimen/margin_16"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/notification_isworking"
+
+        android:textSize="@dimen/text_size_12"/>
+
+</RelativeLayout>

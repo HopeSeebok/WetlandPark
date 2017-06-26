@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_content_mw"
+    android:orientation="horizontal" >
+<!--<TextView -->
+    <!--style="@style/layout_content_ww.taskinfo_textview_label"-->
+    <!--android:layout_marginLeft="28dp"-->
+    <!--android:text="图    片："/>-->
+
+    <FrameLayout
+        android:id="@+id/mImageFl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </FrameLayout>
+</LinearLayout>

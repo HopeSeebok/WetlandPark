@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:layout_marginLeft="15dp"
+        android:id="@+id/back_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="重复单"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="技术问题"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="工单与工作范围不符"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="其它"/>
+        </RadioGroup>
+    <EditText
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/other_et"
+        android:paddingLeft="10dp"
+        android:hint="请输入原因"/>
+
+</LinearLayout>

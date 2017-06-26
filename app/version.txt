@@ -1,0 +1,11 @@
+1、versionCode:1,versionName:1.0,dataBaseVersion:1
+   Author:吴和志
+   Date:2016-10-14
+   Version Content:
+        1、第一次版本发布
+====================================================================================================
+2、versionCode: ,versionName: ,dataBaseVersion:
+   Author:
+   Date:
+   Version Content:
+        1、XXXXXXXX

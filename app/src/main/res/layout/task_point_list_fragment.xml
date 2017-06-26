@@ -1,0 +1,41 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_bg"
+    >
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:layout_below="@+id/title_task"-->
+        <!--android:id="@+id/refreshContainer"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/taskpointlist_nodata_rl"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/taskpointlist_nodata_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无任务"
+            android:layout_centerInParent="true"
+            android:textSize="22sp"
+            android:textColor="@color/gray"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/taskpointlist_rv"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java-gen']
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.4.0'
+//    /**
+//     * 本地Library
+//     */
+//    /*网络请求LiteHttp*/
+//    compile files('libs/lite-http-2.3.1.jar')
+//    /*百度语音*/
+//    compile files('libs/com.baidu.tts_2.2.6.20160505_a2af8d6_beta.jar')
+
+    /**
+     * 运程构建
+     */
+    /*JSON解析包GOSN*/
+    compile 'com.google.code.gson:gson:2.6.2'
+    /*图片显示PhotoView*/
+    compile 'com.github.chrisbanes:PhotoView:1.2.6'
+    /*七牛*/
+    compile 'com.qiniu:qiniu-android-sdk:7.3.+'
+    /*数据库GreenDao*/
+    compile 'org.greenrobot:greendao:2.2.0'
+}

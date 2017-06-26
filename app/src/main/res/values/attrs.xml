@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--BottomNavigationBar样式-->
+    <declare-styleable name="BottomNavigationBar">
+        <attr name="bnbElevation" format="dimension" />
+        <attr name="bnbActiveColor" format="color" />
+        <attr name="bnbInactiveColor" format="color" />
+        <attr name="bnbBackgroundColor" format="color" />
+        <attr name="bnbAnimationDuration" format="integer" />
+        <attr name="bnbMode" format="enum">
+            <enum name="mode_default" value="0" />
+            <enum name="mode_fixed" value="1" />
+            <enum name="mode_shifting" value="2" />
+        </attr>
+        <attr name="bnbBackgroundStyle" format="enum">
+            <enum name="background_style_default" value="0" />
+            <enum name="background_style_static" value="1" />
+            <enum name="background_style_ripple" value="2" />
+        </attr>
+        <attr name="bnbAutoHideEnabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="frameDrawable" format="reference|color" />
+        <attr name="stateDrawable" format="reference|color" />
+        <attr name="stateMaskDrawable" format="reference|color" />
+        <attr name="sliderDrawable" format="reference|color" />
+        <attr name="withTextInterval" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="FormWriteView">
+        <attr name="wvItemName" format="string" />
+        <attr name="wvHint" format="string" />
+        <attr name="wvForcible" format="boolean" />
+        <attr name="wvInputType">
+            <enum name="text" value="0"/>
+            <enum name="num" value="1"/>
+            <enum name="phone" value="2"/>
+            <enum name="code" value="3"/>
+        </attr>
+        <attr name="wvUnit" format="string"/>
+    </declare-styleable>
+
+    <!--选择器-->
+    <declare-styleable name="FormSeletorView">
+        <attr name="name_seletor" format="string" />
+        <attr name="hint_seletor" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="form_show_item_view">
+        <attr name="pro_name_s" format="string" />
+        <attr name="pro_content_s" format="string"/>
+        <attr name="pro_force_s" format="boolean" />
+    </declare-styleable>
+
+    <!-- CBOK: 表单滚轮单选项控件属性-->
+    <declare-styleable name="FormScrollSelectorView">
+        <attr name="selectorName" format="string"/>
+    </declare-styleable>
+
+    <!-- CBOK: 表单RadioGroup控件属性-->
+    <declare-styleable name="FormRadioSelectorView">
+        <attr name="radioSelectorName" format="string" />
+        <attr name="firstButtonName" format="string" />
+        <attr name="secondButtonName" format="string" />
+        <attr name="thirdButtonName" format="string" />
+    </declare-styleable>
+
+    <!-- huangyue: 表单CheckBox控件属性-->
+    <declare-styleable name="FormCheckBoxSelectorView">
+        <attr name="checkBoxSelectorName" format="string" />
+        <attr name="checkBoxSelectorNote" format="string"/>
+        <attr name="checkBoxName" format="string" />
+        <attr name="checked" format="boolean"/>
+        <attr name="textOn" format="string"/>
+        <attr name="textOff" format="string"/>
+    </declare-styleable>
+
+    <!-- CBOK: 表单滚轮可点击项控件属性（基类）-->
+    <declare-styleable name="FormClickableView" >
+        <attr name="itemName" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="main_bttom_tab">
+        <attr name="main_tab_name" format="string"/>
+        <attr name="main_tab_icon" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="App_Attrs">
+        <!-- 默认背景图 -->
+        <attr name="baseBackground" format="color|reference"/>
+    </declare-styleable>
+
+    <!--switchmultibutton-->
+    <declare-styleable name="SwitchMultiButton">
+        <attr name="switchRadius" format="dimension" />
+        <attr name="switchWidth" format="dimension" />
+        <attr name="switchTextSize" format="dimension" />
+        <attr name="switchSelectedTab" format="integer" />
+        <attr name="switchSelectedColor" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButtonV2">
+        <attr name="kswThumbDrawable" format="reference"/>
+        <attr name="kswThumbColor" format="color|reference"/>
+        <attr name="kswThumbMargin" format="dimension|reference"/>
+        <attr name="kswThumbMarginTop" format="dimension|reference"/>
+        <attr name="kswThumbMarginBottom" format="dimension|reference"/>
+        <attr name="kswThumbMarginLeft" format="dimension|reference"/>
+        <attr name="kswThumbMarginRight" format="dimension|reference"/>
+        <attr name="kswThumbWidth" format="dimension|reference"/>
+        <attr name="kswThumbHeight" format="dimension|reference"/>
+        <attr name="kswThumbRadius" format="dimension|reference"/>
+        <attr name="kswBackRadius" format="dimension|reference"/>
+        <attr name="kswBackDrawable" format="reference"/>
+        <attr name="kswBackColor" format="color|reference"/>
+        <attr name="kswFadeBack" format="boolean"/>
+        <attr name="kswBackMeasureRatio" format="float"/>
+        <attr name="kswAnimationDuration" format="integer"/>
+        <attr name="kswTintColor" format="color|reference"/>
+        <attr name="kswTextOn" format="string"/>
+        <attr name="kswTextOff" format="string"/>
+        <attr name="kswTextMarginH" format="dimension"/>
+        <attr name="kswAutoAdjustTextPosition" format="boolean"/>
+    </declare-styleable>
+</resources>

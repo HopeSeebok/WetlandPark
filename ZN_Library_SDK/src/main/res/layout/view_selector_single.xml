@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--单选的选择器-->
+    <com.yunwei.library.view.NumberPickerView
+        android:id="@+id/picker_single_selector_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:contentDescription="单选中的内容"
+        app:npv_ItemPaddingVertical="10dp"
+        app:npv_HintText="  "
+        app:npv_DividerHeight="2.5dp"
+        app:npv_RespondChangeOnDetached="false"
+        app:npv_TextSizeHint="16sp" />
+
+</merge>

@@ -1,0 +1,143 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply from: 'config.gradle'
+apply plugin: 'me.tatarka.retrolambda'
+
+ext.RxJavaVersion = '1.2.2';
+ext.RxAndroidVersion = '1.2.1';
+ext.RxBindingVersion = '1.2.0';
+
+def currentTime() {
+    return new Date().format("yyyyMMdd")
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.yunwei.wetlandpark"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 3
+        versionName "1.2.0"
+        multiDexEnabled true
+        // 设置支持的SO库架构
+        ndk {
+            abiFilters 'armeabi'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "871795c8db70b7d0b5a1f938", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    dexOptions {
+        preDexLibraries = false
+    }
+
+    //签名文件
+    signingConfigs {
+        config {
+            keyAlias 'yunwei'
+            keyPassword 'yunwei@163.com'
+            storeFile file('yunwei.keystore.jks')
+            storePassword 'yunwei@163.com'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = outputFile.name.replace(".apk", "Park_${currentTime()}_V${defaultConfig.versionCode}.${defaultConfig.versionName}.apk")
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.config
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+
+    dexOptions {
+        incremental = true;
+        preDexLibraries = false
+        javaMaxHeapSize "4g" // 2g should be also OK
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+}
+
+dependencies {
+    //compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile files('src/main/libs/AMap_Location_V2.4.1_20160414.jar')
+    compile project(':ZN_Library_SDK')
+    compile project(':ZN_ArcGis_SDK')
+    compile project(':ZN_RFID_SDK')
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    //google推荐图片加载[郑龙胜]
+    compile 'com.github.bumptech.glide:glide:latest.release'
+    //Bugly[吴和志]
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    //分包处理[吴和志]
+    compile 'com.android.support:multidex:1.0.1'
+    //日历控件[吴和志]
+    compile 'com.prolificinteractive:material-calendarview:1.4.0'
+    //ButterKnife依赖注入[陈浩波]
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    //tablayout[郑龙胜]
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.8@aar'
+    //bttom tab[吴和志]
+    compile 'com.ashokvarma.android:bottom-navigation-bar:1.3.0'
+    //RxJava相关[郑龙胜]
+    compile "io.reactivex:rxandroid:$RxAndroidVersion"
+    compile "io.reactivex:rxjava:$RxJavaVersion"
+    compile "com.ogaclejapan:rxbinding:$RxBindingVersion"
+    //    compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7:0.4.0'
+    //    compile 'com.jakewharton.rxbinding:rxbinding-design:0.4.0'
+    //EventBug[吴和志]
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //极光[郑龙胜]
+    compile 'cn.jiguang:jpush:2.1.8'
+    //expandableTextView[郑龙胜]
+    compile 'com.ms-square:expandableTextView:0.1.4'
+    compile project(':ZN_Baidu_SDK')
+}
+
+//tasks.getByName("assemble"){
+//    it.doLast{
+//        println "$project.name: After assemble, jar libs are copied tolocal repository"
+//        project.ext.versionName = "ddddddd"
+//        copyOutput(false)
+//    }
+//}

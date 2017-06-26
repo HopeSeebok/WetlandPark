@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yunwei.map.MapView
+        android:id="@+id/mapActionActivity_mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:id="@+id/mapActionActivity_comfirm_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_btn_submit"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:textColor="@color/white_light"
+        android:textSize="@dimen/text_size_12"
+        android:text="修改位置"/>
+
+    <ImageView
+        android:layout_width="22dp"
+        android:layout_height="60dp"
+        android:id="@+id/mapActionActivity_marker_icon"
+        android:src="@mipmap/icon_marker_location"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

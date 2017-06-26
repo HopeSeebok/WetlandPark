@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:checkable="true"
+            android:checked="true"
+            android:icon="@mipmap/nav_home_icon"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_task"
+            android:icon="@mipmap/nav_task_icon"
+            android:title="@string/menu_history" />
+
+              <item
+                  android:id="@+id/nav_track"
+                  android:icon="@mipmap/nav_track_icon"
+                  android:title="@string/menu_track" />
+
+        <!--
+                              <item
+                                  android:id="@+id/nav_history"
+                                  android:icon="@mipmap/nav_his_icon"
+                                  android:title="复核" />
+
+                      <item
+                          android:id="@+id/nav_message"
+                          android:icon="@mipmap/nav_msg_icon"
+                          android:title="@string/menu_message" />
+               -->
+    </group>
+
+    <item
+        android:title="其他"
+        android:titleCondensed="false">
+        <menu>
+            <item
+                android:id="@+id/nav_seting"
+                android:icon="@mipmap/nav_seting_icon"
+                android:title="@string/menu_set" />
+            <!--  <item
+                   android:id="@+id/nav_about"
+                   android:icon="@drawable/ic_menu_send"
+                   android:title="@string/menu_about" />-->
+        </menu>
+    </item>
+</menu>

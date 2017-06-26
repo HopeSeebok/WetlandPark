@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:item="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yunwei.wetlandpark.view.ReboundScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <com.yunwei.wetlandpark.widget.FormWriteView
+                android:id="@+id/showTroubleFragment_troubleType_wv"
+                style="@style/formItemCommonStyle"
+                item:wvItemName="隐患类型"
+                android:visibility="gone"/>
+            <com.yunwei.wetlandpark.widget.FormRadioSelectorView
+                android:id="@+id/showTroubleFragment_emergency_rsv"
+                style="@style/formItemCommonStyle"
+                item:radioSelectorName="紧急程度"
+                item:firstButtonName="一般"
+                item:secondButtonName="重要"
+                item:thirdButtonName="紧急" />
+            <com.yunwei.wetlandpark.widget.FormWriteView
+                android:id="@+id/showTroubleFragment_remark_wv"
+                style="@style/formItemCommonStyle"
+                item:wvItemName="备注" />
+            <FrameLayout
+                android:id="@+id/showTroubleFragment_imgPicker_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.yunwei.wetlandpark.view.ReboundScrollView>
+    <LinearLayout
+        android:id="@+id/showTroubleFragment_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_10"
+        android:paddingEnd="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_5"
+        android:visibility="gone">
+        <Button
+            android:id="@+id/showTroubleFragment_maintain_btn"
+            style="@style/formButton"
+            android:text="维修/维护"
+            android:background="@drawable/common_btn_red_selector"/>
+    </LinearLayout>
+
+</RelativeLayout>

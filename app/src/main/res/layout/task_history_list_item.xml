@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_Rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:background="@drawable/item_seletor"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:id="@+id/end_status_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/his_complete"
+            />
+
+        <ImageView
+            android:id="@+id/iv_item_home_history_turn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/arrow_right" />
+
+        <TextView
+            android:id="@+id/task_decription_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayout3"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="60dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="2dp"
+            android:text="今天解决2个水管漏水问题"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/task_title_tv"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="派达时间："
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/task_ps_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="2016-12-01"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/task_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="水管漏水"
+            android:textSize="18sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/task_id_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID:11125"
+            android:textSize="17sp"
+            android:layout_above="@+id/linearLayout3"
+            android:layout_toLeftOf="@+id/end_status_iv"
+            android:layout_toStartOf="@+id/end_status_iv" />
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/iv_item_home_history_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_change_inf"
+            android:layout_below="@+id/task_title_tv"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        style="@style/line_1"/>
+</RelativeLayout>

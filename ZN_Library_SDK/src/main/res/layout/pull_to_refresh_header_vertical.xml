@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <FrameLayout
+        android:id="@+id/fl_inner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_12"
+        android:paddingLeft="@dimen/margin_24"
+        android:paddingRight="@dimen/margin_24"
+        android:paddingTop="@dimen/margin_12" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+
+                <ImageView
+                    android:id="@+id/pull_to_refresh_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@mipmap/load_img_up" />
+
+                <ProgressBar
+                    android:id="@+id/pull_to_refresh_progress"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/pull_to_refresh_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="下拉刷新"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="@color/dialog_btn_selector"
+                    android:textSize="@dimen/text_size_15" />
+
+                <TextView
+                    android:id="@+id/pull_to_refresh_sub_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/dialog_btn_selector"
+                    android:textSize="@dimen/text_size_15"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</merge>

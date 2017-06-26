@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/form_pop_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@drawable/item_seletor"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10" />
+
+        <Button
+            android:id="@+id/form_pop_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/margin_10"
+            android:background="@drawable/common_btn_red_selector"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

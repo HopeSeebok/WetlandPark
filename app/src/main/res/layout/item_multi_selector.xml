@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckedTextView
+        android:id="@+id/title_checktv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_10"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:filterTouchesWhenObscured="true"
+        android:focusableInTouchMode="true"
+        android:focusable="false"
+        android:textSize="@dimen/text_size_15"
+        android:textColor="#4D4D4D"/>
+
+</LinearLayout>

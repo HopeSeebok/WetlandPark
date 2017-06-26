@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yunwei.map.MapView
+        android:id="@+id/main_mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_bottom_navigationBar"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:id="@+id/main_content_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_bottom_navigationBar"
+        android:visibility="visible" />
+
+    <com.yunwei.wetlandpark.view.MainBottomNavigationBar
+        android:id="@+id/main_bottom_navigationBar"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

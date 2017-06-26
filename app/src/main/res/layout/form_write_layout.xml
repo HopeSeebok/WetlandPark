@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/write_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_8"
+        android:paddingTop="@dimen/margin_8"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_5">
+
+        <TextView
+            android:id="@+id/form_write_force"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_centerVertical="true"
+            android:maxLines="1"
+            android:minWidth="88dp"
+            android:visibility="gone"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/form_write_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/form_write_force"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:minWidth="90dp"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/form_write_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="30dp"
+            android:textColor="@color/black"
+            android:text="%"/>
+
+        <EditText
+            android:id="@+id/form_write_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:layout_toRightOf="@id/form_write_title"
+            android:layout_toLeftOf="@id/form_write_unit"
+            android:background="@color/transparency"
+            android:paddingRight="@dimen/margin_5"
+            android:paddingLeft="@dimen/margin_2"
+            android:paddingTop="@dimen/margin_5"
+            android:paddingBottom="@dimen/margin_5"
+            android:hint="输入"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+
+    <View style="@style/line_1"
+        android:layout_marginLeft="@dimen/margin_20"/>
+</LinearLayout>

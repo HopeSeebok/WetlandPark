@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <com.yunwei.wetlandpark.view.ReboundScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/user_bj"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/acc_head_iv"
+                    android:layout_width="80dip"
+                    android:layout_height="80dip"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:src="@mipmap/homepage_headimg_defaut" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:layout_toRightOf="@+id/acc_head_iv"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mine_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="吴和志"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_20" />
+
+                    <TextView
+                        android:id="@+id/mine_dev_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="巡查队"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_16" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <View style="@style/line_1" />
+
+                <TextView
+                    android:id="@+id/set_record_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/item_seletor"
+                    android:drawableLeft="@mipmap/icon_shangbao"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:gravity="center|left"
+                    android:paddingBottom="@dimen/margin_18"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:paddingRight="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_18"
+                    android:text="@string/record"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View style="@style/line_1" />
+
+                <View
+                    style="@style/line_1"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/set_msg_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/item_seletor"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:paddingBottom="@dimen/margin_12"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:paddingRight="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_12"
+                    android:text="@string/set_msg_info"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15"
+                    android:visibility="gone" />
+
+                <View
+                    style="@style/line_1"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/set_track_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/item_seletor"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:paddingBottom="@dimen/margin_12"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:paddingRight="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_12"
+                    android:text="@string/set_track_info"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15"
+                    android:visibility="gone" />
+
+                <View style="@style/line_1"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View style="@style/line_1" />
+
+                <TextView
+                    android:id="@+id/set_idea_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/item_seletor"
+                    android:drawableRight="@mipmap/set_right_icon"
+                    android:paddingBottom="@dimen/margin_12"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:paddingRight="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_12"
+                    android:text="@string/set_idea_str"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15"
+                    android:visibility="gone" />
+
+                <View
+                    style="@style/line_1"
+                    android:layout_marginLeft="@dimen/margin_13"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/set_user_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/item_seletor"
+                    android:drawableLeft="@mipmap/icon_change_inf"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:gravity="center|left"
+                    android:paddingBottom="@dimen/margin_12"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:paddingRight="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_12"
+                    android:text="@string/set_user_info"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View style="@style/line_1" />
+
+                <TextView
+                    android:id="@+id/set_about_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/item_seletor"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:paddingBottom="@dimen/margin_12"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:paddingRight="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_12"
+                    android:drawableLeft="@mipmap/icon_about"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:gravity="center|left"
+                    android:text="@string/set_about"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View style="@style/line_1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View style="@style/line_1" />
+
+                <TextView
+                    android:id="@+id/set_change_user_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/item_seletor"
+                    android:drawableLeft="@mipmap/icon_switch_user"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:gravity="center|left"
+                    android:paddingBottom="@dimen/margin_12"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:paddingRight="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_12"
+                    android:text="@string/change_user"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View
+                    style="@style/line_1"/>
+
+                <TextView
+                    android:id="@+id/set_exit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/item_seletor"
+                    android:drawableLeft="@mipmap/icon_quit"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:gravity="center|left"
+                    android:paddingBottom="@dimen/margin_12"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:paddingRight="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_12"
+                    android:text="@string/exit"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View style="@style/line_1" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.yunwei.wetlandpark.view.ReboundScrollView>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBFBFB">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_title_bar_height"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/his_title_back_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:minWidth="@dimen/head_title_bar_height"
+            android:background="@drawable/head_title_bar_seletor">
+            <ImageView
+                android:id="@+id/title_back_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_backarrow"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/his_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:drawableRight="@mipmap/arrow_down"
+            android:gravity="center"
+            android:drawablePadding="@dimen/margin_5"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/text_size_18"/>
+    </RelativeLayout>
+
+    <com.yunwei.library.pulltoprefresh.PullToRefreshListView
+        android:id="@+id/his_event_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

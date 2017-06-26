@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:item="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.yunwei.wetlandpark.view.ReboundScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+            <com.yunwei.wetlandpark.widget.FormWriteView
+                android:id="@+id/showDeviceFragment_deviceCode_wv"
+                style="@style/formItemCommonStyle"
+                item:wvItemName="编号" />
+            <com.yunwei.wetlandpark.widget.FormWriteView
+                android:id="@+id/showDeviceFragment_address_wv"
+                style="@style/formItemCommonStyle"
+                item:wvItemName="地点" />
+            <FrameLayout
+                android:id="@+id/showDeviceFragment_imgPicker_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </com.yunwei.wetlandpark.view.ReboundScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/showDeviceFragment_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_10"
+        android:paddingEnd="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_5">
+        <Button
+            android:id="@+id/showDeviceFragment_check_btn"
+            style="@style/formButton"
+            android:text="巡查"
+            android:background="@drawable/common_btn_purple_selector" />
+        <Button
+            android:id="@+id/showDeviceFragment_maintain_btn"
+            android:layout_marginLeft="@dimen/margin_10"
+            style="@style/formButton"
+            android:text="维护"
+
+            android:background="@drawable/common_btn_red_selector"/>
+    </LinearLayout>
+</RelativeLayout>

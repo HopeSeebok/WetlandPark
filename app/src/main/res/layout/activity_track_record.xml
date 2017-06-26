@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yunwei.map.MapView
+        android:id="@+id/track_record_mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/track_complete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="bottom|center"
+                android:paddingBottom="@dimen/margin_10"
+                android:text="@string/track_complete"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:textSize="@dimen/text_size_12" />
+
+            <Button
+                android:id="@+id/track_record_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="bottom|center"
+                android:paddingBottom="@dimen/margin_10"
+                android:text="@string/track_start"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/track_record_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#98000000"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/track_record_time"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="@string/track_time"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15" />
+
+            <View
+                android:layout_width="0.7dip"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/track_record_distance"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="@string/track_dis"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

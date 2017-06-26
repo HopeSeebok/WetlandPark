@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:item="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yunwei.wetlandpark.view.ReboundScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <com.yunwei.wetlandpark.widget.FormWriteView
+                android:id="@+id/checkDevice_deviceCode_formView"
+                style="@style/formItemCommonStyle"
+                item:wvItemName="设施编号"/>
+            <com.yunwei.wetlandpark.widget.FormWriteView
+                android:id="@+id/checkDevice_deviceType_formView"
+                style="@style/formItemCommonStyle"
+                item:wvItemName="设施类型"/>
+            <com.yunwei.wetlandpark.widget.FormWriteView
+                android:id="@+id/checkDevice_address_formView"
+                style="@style/formItemCommonStyle"
+                item:wvItemName="存放地点"/>
+            <com.yunwei.wetlandpark.widget.FormWriteView
+                android:id="@+id/checkDevice_time_formView"
+                style="@style/formItemCommonStyle"
+                item:wvItemName="巡查时间"/>
+
+            <com.yunwei.wetlandpark.widget.FormRadioSelectorView
+                android:id="@+id/checkDevice_deviceStatus_RadioSelector"
+                style="@style/formItemCommonStyle"
+                item:radioSelectorName="设施状态"
+                item:firstButtonName="正常"
+                item:secondButtonName="故障" />
+            <LinearLayout
+                android:id="@+id/checkDevice_HD_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <com.yunwei.wetlandpark.widget.FormSpinnerSelectorView
+                    android:id="@+id/checkDevice_HDType_formSelector"
+                    style="@style/formItemCommonStyle"
+                    item:itemName="隐患类型" />
+                <com.yunwei.wetlandpark.widget.FormWriteView
+                    android:id="@+id/checkDevice_HDDesc_formView"
+                    style="@style/formItemCommonStyle"
+                    item:wvItemName="隐患描述"/>
+            </LinearLayout>
+            <com.yunwei.wetlandpark.widget.FormWriteView
+                android:id="@+id/checkDevice_note_formView"
+                style="@style/formItemCommonStyle"
+                item:wvItemName="备注"/>
+            <FrameLayout
+                android:id="@+id/checkDevice_imgPicker_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.yunwei.wetlandpark.view.ReboundScrollView>
+</LinearLayout>

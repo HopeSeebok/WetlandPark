@@ -1,0 +1,136 @@
+android {
+    /**
+     * 配制参数
+     */
+    buildTypes {
+        release {
+            buildConfigField "String", "DOMAI", "\"http://park.wayto.com.cn:8081/\""
+            buildConfigField "String", "QINIU_DOMAIN", "\"http://img.wayto.com.cn/\""
+            buildConfigField "boolean", "LOGSWITCH", "true"
+        }
+        debug {
+            buildConfigField "String", "DOMAI", "\"http://10.10.10.182:89/\""
+            buildConfigField "String", "QINIU_DOMAIN", "\"http://oi7qaq1x0.bkt.clouddn.com/\""
+            buildConfigField "boolean", "LOGSWITCH", "false"
+        }
+    }
+    /**
+     * 网络请求方法配制
+     */
+    defaultConfig {
+        /**
+         * manifest文件配制
+         */
+        /*高德地图Key*/
+        resValue "string", "GAODE_MAP_KEY", "\"32d1ce856d471b577943e9249b817bb8\""
+        /*百度地图AK*/
+        resValue "string", "BAIDU_MAP_KEY", "\"eRLhgqsXxG49WAiwyAC9rjB2kmQsRmBT\""
+        /*腾讯Bugly ID*/
+        resValue "string", "BUGLY_ID", "\"d077a3cb34\""
+        /*逆向地理编码Key*/
+        buildConfigField "String", "REGEO_MAP_KEY", "\"a7313eca70306f96eb6a3e6341a12355\""
+        /*七牛文件名*/
+        buildConfigField "String", "QINIU_FILENAME", "\"wayto_part\""
+
+        /*-------------------------------------------------------------------------------------*/
+
+        /**
+         * Base配制
+         */
+        /*七年Token URL*/
+        buildConfigField "String", "QINIU_TOKEN_URL", "\"v3/config/qiniu\""
+        /*版本更新*/
+        buildConfigField "String", "CHECK_VERSION_URL", "\"v2/config/ver\""
+        /*配制文件*/
+        buildConfigField "String", "CONFIG_URL", "\"v1/user/config\""
+        /*关键字搜索*/
+        buildConfigField "String", "SEARCH_URL", "\"v1/search?key=\""
+        /*轨迹上传*/
+        buildConfigField "String", "REFRESH_LOCATION_URL", "\"v1/user/refreshLocation\""
+        /*百度鹰眼服务ID*/
+        buildConfigField "String", "BAIDU_SERVICE_ID", "\"131310\""
+        /*逆向地理编码[高德]*/
+        buildConfigField "String", "REVERSE_GEO_CODIN_URL", "\"http://restapi.amap.com/v3/geocode/regeo?\""
+
+        /*-------------------------------------------------------------------------------------*/
+
+        /**
+         * 登录、用户信息相关
+         */
+        /*登录*/
+        buildConfigField "String", "LOGIN_URL", "\"token\""
+        /*修改用户信息*/
+        buildConfigField "String", "EDIT_USER_INFO_URL", "\"v2/user/\""
+        /*修改用户密码*/
+        buildConfigField "String", "UPDATE_USER_PWD_URL", "\"v2/account/changepwd/\""
+
+        /*-------------------------------------------------------------------------------------*/
+        /**
+         * 足迹
+         */
+        /*足迹上传*/
+        buildConfigField "String", "TRACK_UPLOAD_URL", "\"v1/footprint\""
+        /*足迹详情 by Data*/
+        buildConfigField "String", "TRACK_QUERY_BY_DATA", "\"v1/footprint?date=\""
+
+        /*-------------------------------------------------------------------------------------*/
+        /**
+         * 地图相关
+         */
+        /* 图层查询*/
+        buildConfigField "String", "MAP_LAYER_SEARCH_URL", "\"http://116.7.249.34:6080/arcgis/rest/services/Park/MapServer\""
+        /* 设施图层*/
+        buildConfigField "String", "DEVICE_LAYER_URL", "\"http://116.7.249.34:6080/arcgis/rest/services/Park/FeatureServer/1\""
+        /* 隐患图层*/
+        buildConfigField "String", "TROUBLE_LAYER_URL", "\"http://116.7.249.34:6080/arcgis/rest/services/Park/FeatureServer/0\""
+
+
+        /*-------------------------------------------------------------------------------------*/
+        /**
+         * 设施
+         */
+        /*关联/新增设施*/
+        buildConfigField "String", "LINK_DEVICE", "\"v2/device\""
+        /*获取设施类型*/
+        buildConfigField "String", "GET_DEVICE_TYPES", "\"v2/devicetype\""
+        /*获取设施信息 By guId*/
+        buildConfigField "String", "DEVICE_INFO_BY_GUID", "\"v2/device/\""
+        /*获取设施信息 By RFID*/
+        buildConfigField "String", "DEVICE_INFO_BY_RFID", "\"v2/device?rfid=\""
+        /*巡查*/
+        buildConfigField "String", "CHECK_PLAN", "\"v2/inspection/daily\""
+        /*维护设施*/
+        buildConfigField "String", "MAINTAIN_DEVICE", "\"v2/mission/servicing\""
+
+        /*-------------------------------------------------------------------------------------*/
+        /**
+         * Trouble
+         */
+        /*Make Trouble*/
+        buildConfigField "String", "MAKE_TROUBLE", "\"v2/danger\""
+        /*获取Trouble信息 By ID*/
+        buildConfigField "String", "TROUBLE_INFO_BY_ID", "\"v2/danger/\""
+        /*处理Trouble*/
+        buildConfigField "String", "SHOOT_TROUBLE", "\"v2/mission/servicingdanger\""
+        /*获取Trouble Types*/
+        buildConfigField "String", "GET_TROUBLE_TYPES", "\"v2/dangertype\""
+
+        /*-------------------------------------------------------------------------------------*/
+        /**
+         * 任务
+         */
+        buildConfigField "String", "GET_MAINTAIN_INFO", "\"v2/servicing/\""
+
+        /*-------------------------------------------------------------------------------------*/
+        /**
+         * 其他
+         */
+        /*单位列表*/
+        buildConfigField "String", "UNIT_LIST_URL", "\"v2/unit\""
+        /*签到*/
+        buildConfigField "String", "SIGN_IN_URL", "\"v2/record\""
+
+
+        /*-------------------------------------------------------------------------------------*/
+    }
+}

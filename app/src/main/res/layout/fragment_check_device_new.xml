@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:item="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.yunwei.wetlandpark.view.ReboundScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingTop="20dp">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/planFragment_head_image"-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:src="@drawable/ic_launcher"/>-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/planFragment_plan_name"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textSize="15sp"-->
+                        <!--android:text="计划名称"/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/planFragment_plan_state"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:text="未完成"/>-->
+
+                <!--</RelativeLayout>-->
+
+
+            <!--</LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <com.yunwei.wetlandpark.widget.FormWriteView
+                    android:id="@+id/planFragment_plan_name"
+                    style="@style/formItemCommonStyle"
+                    item:wvItemName="计划名称"/>
+                <com.yunwei.wetlandpark.widget.FormWriteView
+                    android:id="@+id/planFragment_plan_executor"
+                    style="@style/formItemCommonStyle"
+                    item:wvItemName="处理人员"/>
+                <com.yunwei.wetlandpark.widget.FormWriteView
+                    android:id="@+id/planFragment_plan_date"
+                    style="@style/formItemCommonStyle"
+                    item:wvItemName="起始日期"/>
+                <com.yunwei.wetlandpark.widget.FormWriteView
+                    android:id="@+id/planFragment_plan_note"
+                    style="@style/formItemCommonStyle"
+                    item:wvItemName="备注"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="机房环境检查"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <com.yunwei.wetlandpark.widget.FormWriteView
+                    android:id="@+id/planFragment_first_second_room_temp"
+                    style="@style/formItemCommonStyle"
+                    item:wvItemName="一二期机房温度"
+                    item:wvUnit="&#176;C"
+                    item:wvInputType="num"/>
+                <com.yunwei.wetlandpark.widget.FormWriteView
+                    android:id="@+id/planFragment_first_second_room_hum"
+                    style="@style/formItemCommonStyle"
+                    item:wvItemName="一二期机房湿度"
+                    item:wvUnit="%"
+                    item:wvInputType="num"/>
+                <com.yunwei.wetlandpark.widget.FormWriteView
+                    android:id="@+id/planFragment_third_room_temp"
+                    style="@style/formItemCommonStyle"
+                    item:wvItemName="三期机房温度"
+                    item:wvUnit="&#176;C"
+                    item:wvInputType="num"/>
+                <com.yunwei.wetlandpark.widget.FormWriteView
+                    android:id="@+id/planFragment_third_room_hum"
+                    style="@style/formItemCommonStyle"
+                    item:wvItemName="三期机房湿度"
+                    item:wvUnit="%"
+                    item:wvInputType="num"/>
+                <com.yunwei.wetlandpark.widget.FormCheckBoxSelectorView
+                    android:id="@+id/planFragment_firefighting_system"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    item:checkBoxSelectorName="消防系统"
+                    item:checkBoxSelectorNote="指示灯、声音有无报警"
+                    item:checked="false"
+                    item:textOn="有"
+                    item:textOff="无"/>
+                <com.yunwei.wetlandpark.widget.FormCheckBoxSelectorView
+                    android:id="@+id/planFragment_usb_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    item:checkBoxSelectorName="UPS房"
+                    item:checkBoxSelectorNote="指示灯、声音有无报警"
+                    item:checked="false"
+                    item:textOn="有"
+                    item:textOff="无"/>
+                <com.yunwei.wetlandpark.widget.FormCheckBoxSelectorView
+                    android:id="@+id/planFragment_air_conditioner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    item:checkBoxSelectorName="风冷空调"
+                    item:checkBoxSelectorNote="有无报警、查看有无漏水"
+                    item:checked="false"
+                    item:textOn="有"
+                    item:textOff="无"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="发电机配电房"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+                <com.yunwei.wetlandpark.widget.FormCheckBoxSelectorView
+                    android:id="@+id/planFragment_compensation_meter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    item:checkBoxSelectorName="补偿仪表"
+                    item:checkBoxSelectorNote="补偿功率是否介于0.9-0.99之间"
+                    item:checked="true"
+                    item:textOn="是"
+                    item:textOff="否"/>
+                <com.yunwei.wetlandpark.widget.FormCheckBoxSelectorView
+                    android:id="@+id/planFragment_distribution_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    item:checkBoxSelectorName="配电房"
+                    item:checkBoxSelectorNote="仪表指示灯、排气扇、消防是否正常"
+                    item:checked="true"
+                    item:textOn="是"
+                    item:textOff="否"/>
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="其他设备检查"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+                <com.yunwei.wetlandpark.widget.FormCheckBoxSelectorView
+                    android:id="@+id/planFragment_core_router"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    item:checkBoxSelectorName="核心路由"
+                    item:checkBoxSelectorNote="指示灯、风扇是否运转正常"
+                    item:checked="true"
+                    item:textOn="是"
+                    item:textOff="否"/>
+                <com.yunwei.wetlandpark.widget.FormCheckBoxSelectorView
+                    android:id="@+id/planFragment_access_system"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    item:checkBoxSelectorName="门禁系统"
+                    item:checkBoxSelectorNote="监控主机、显示屏、门锁等是否正常"
+                    item:checked="true"
+                    item:textOn="是"
+                    item:textOff="否"/>
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="巡查点打卡记录"/>
+            
+            <GridLayout
+                android:id="@+id/planFragment_check_point_gridlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="5"
+                android:background="@color/white"
+                android:layout_marginBottom="40dp"/>
+
+
+        </LinearLayout>
+    </com.yunwei.wetlandpark.view.ReboundScrollView>
+</LinearLayout>

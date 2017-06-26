@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/itemWorkHistoryLayout_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_5"
+        android:background="@drawable/item_seletor">
+
+        <ImageView
+            android:id="@+id/itemWorkHistoryLayout_logo_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_change_inf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/itemWorkHistoryLayout_turnLeft_imageView"
+            android:layout_toRightOf="@+id/itemWorkHistoryLayout_logo_imageView"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemWorkHistoryLayout_firstTitle_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="title 1:"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/itemWorkHistoryLayout_secondTitle_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_15"
+                android:text="title 2:" />
+
+            <TextView
+                android:id="@+id/itemWorkHistoryLayout_thirdTitle_textView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="title 3:"
+                android:textColor="@color/gray"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_15"/>
+
+            <TextView
+                android:id="@+id/itemWorkHistoryLayout_forthTitle_textView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="title 4:"
+                android:textColor="@color/gray"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_15"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/itemWorkHistoryLayout_turnLeft_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/arrow_right" />
+
+        <ImageView
+            android:id="@+id/itemWorkHistoryLayout_state_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/itemWorkHistoryLayout_turnLeft_imageView"
+            android:src="@mipmap/icon_state_unsubmitted" />
+    </RelativeLayout>
+    <View
+        style="@style/line_1"/>
+</LinearLayout>

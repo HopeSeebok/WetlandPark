@@ -1,0 +1,257 @@
+<resources>
+    <string name="app_name">公园巡检</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <!--common 公用的字符串资源-->
+    <string name="common_save">保存</string>
+    <string name="common_submit">提交</string>
+    <string name="common_address">地址</string>
+    <string name="common_remark">备注</string>
+    <string name="common_desc">描述</string>
+    <string name="common_create_time">上报时间</string>
+    <string name="common_true">是</string>
+    <string name="common_false">否</string>
+    <string name="common_sure">确定</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_no_data">暂无数据</string>
+
+    <!--menu-->
+    <string name="menu_home">主页</string>
+    <string name="menu_track">足迹</string>
+    <string name="menu_task">任务</string>
+    <string name="menu_history">历史</string>
+    <string name="menu_message">消息</string>
+    <string name="menu_set">设置</string>
+    <string name="menu_about">关于</string>
+    <string name="menu_mine">我的</string>
+
+    <!--Dialog-->
+    <string name="dialog_login_str">登录&#8230;</string>
+    <string name="dialog_submit_str">提交中&#8230;</string>
+    <string name="img_cro">图片处理&#8230;</string>
+    <string name="device_req">获取设施信息&#8230;</string>
+    <string name="version_check">检测&#8230;</string>
+    <string name="dialog_title">提示</string>
+    <string name="gps_open_dialog">GPS未打开，打开GPS能准确的定位!</string>
+    <string name="gps_open">打开</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_close">关闭</string>
+    <string name="rfid_ass_title">检测提示</string>
+    <string name="rfid_ass_content">该电子标签没有关联设施，是否关联？</string>
+    <string name="dialog_ass_btn">关联</string>
+    <string name="dialog_fire_list_title">设备列表</string>
+    <string name="maintain_content_title">选择维护内容</string>
+    <string name="accessory_str">图片：</string>
+    <string name="photograph">拍照</string>
+    <string name="album">相册</string>
+    <string name="cancel">取消</string>
+
+    <!--Toast-->
+    <string name="netword_invalid">网络不可用！</string>
+    <string name="login_failure">登录失败!</string>
+    <string name="device_info_error">设施信息获取失败!</string>
+    <string name="notnull_address">地址不能为空！</string>
+    <string name="notnull_owner">所属派出所不能为空！</string>
+    <string name="notnull_facility_type">设施类型不能为空！</string>
+    <string name="notnull_facility_category">设施类别不能为空！</string>
+    <string name="login_error_desc">账号或密码不正确!</string>
+
+
+    <!--Title-->
+    <string name="water_info_title_str">水表信息</string>
+    <string name="meter_read_title_str">抄表</string>
+    <string name="meter_falut_title_str">故障抄表</string>
+    <string name="work_order_title">创建工单</string>
+    <string name="save">保存</string>
+    <string name="fac_info_title">设施信息</string>
+    <string name="fac_maintain_title">巡查</string>
+    <string name="search_result_title">查询结果</string>
+    <string name="mine_title">我的</string>
+    <string name="add_facility_title">新增设施</string>
+    <string name="view_facility_title">查看设施</string>
+    <string name="hiddenDanger_title_add">新增隐患</string>
+    <string name="hiddenDanger_title_history">隐患历史</string>
+    <string name="form_title_add">填报%1$s</string>
+
+    <!--登录-->
+    <string name="account_str">账号:</string>
+    <string name="pwd_str">密码:</string>
+    <string name="account_hint">输入账号</string>
+    <string name="pwd_hint">输入密码</string>
+    <string name="login_str">登录</string>
+    <string name="pwd_forget_str">忘记密码?</string>
+    <string name="next_str">下一步</string>
+    <string name="pwd_set_t1">密码重置(1/2)</string>
+    <string name="pwd_set_t2">密码重置(2/2)</string>
+    <string name="verify_code_hint">输入验证码</string>
+    <string name="pwd_rest_str">密&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;码:</string>
+    <string name="pwd_rest_affirm">密码确认:</string>
+    <string name="pwd_rest_affirm_hint">再输入一次密码</string>
+    <string name="submit">提交</string>
+
+    <!--功能-->
+    <string name="function_report">上报</string>
+
+    <string name="calendar_item_new_count">%条</string>
+
+    <!--设备状态-->
+    <string name="facility_status_normal">正常</string>
+    <string name="facility_status_fault">故障</string>
+    <string name="facility_status_abandon">废弃</string>
+
+    <!--设施-->
+    <string name="facility">设施</string>
+    <string name="facility_accessory_str">附件：</string>
+    <string name="facility_photograph">拍照</string>
+    <string name="facility_album">相册</string>
+    <string name="facility_cancel">取消</string>
+    <string name="facility_code">设施编号</string>
+    <string name="facility_oldCode">设施旧编号</string>
+    <string name="facility_status">设施状态</string>
+    <string name="facility_type">设施类型</string>
+    <string name="facility_category">设施类别</string>
+    <string name="facility_address">地址</string>
+    <string name="facility_road_section">路段</string>
+    <string name="facility_addrCode">球机地址码</string>
+    <string name="facility_lampCode">路灯杆编号</string>
+    <string name="facility_height">杆高度</string>
+    <string name="facility_ownerOffice">所属分局</string>
+    <string name="facility_ownerPolice">所属警务室</string>
+    <string name="facility_owner">所属派出所</string>
+    <string name="facility_monitorCode">所属监控室</string>
+    <string name="facility_creator">上报人</string>
+    <string name="facility_creator_time">上报时间</string>
+    <string name="facility_zone">所属片区</string>
+    <string name="facility_save">保存</string>
+    <string name="facility_submit">提交</string>
+    <string name="facility_check">巡查设施</string>
+    <string name="facility_repair">维护设施</string>
+    <string name="facility_hidden_danger">填报隐患</string>
+
+    <string name="facility_hint_height"> 单位：cm </string>
+
+    <string name="facility_title_select_facility_category"> 请选择设施类别 </string>
+    <string name="facility_title_select_facility_type"> 请选择设施类型 </string>
+    <string name="facility_title_select_office"> 请选择分局 </string>
+    <string name="facility_title_select_zone"> 请选择片区 </string>
+    <string name="facility_title_select_owner"> 请选择所属派出所 </string>
+
+
+    <!--足迹-->
+    <string name="track_title_his">历史</string>
+    <string name="track_title_collen">采集</string>
+    <string name="collen_track_title">足迹采集</string>
+    <string name="track_start">开始</string>
+    <string name="track_pause">暂停</string>
+    <string name="track_complete">结束</string>
+    <string name="track_continue">继续</string>
+    <string name="track_time">时长:</string>
+    <string name="track_dis">距离:</string>
+
+    <!--签到签退-->
+    <string name="notification_isworking">当前处于上班期间，请各位同事站好各自岗位</string>
+    <string name="sign_in">上班</string>
+    <string name="sign_out">下班</string>
+    <string name="sign_in_success">您已上班!</string>
+    <string name="sign_out_success">您已下班！</string>
+    <string name="sign_failed">操作失败，请重试！</string>
+    <string name="choose_group_users">请选择上班人员</string>
+    <string name="message_select_none">您没有选择任何组员！</string>
+    <string name="message_selected">您选择了：%1$s </string>
+    <string name="message_no_group_users">当前账号下面没有组员信息！</string>
+    <string name="message_sign_remainder">您今天还没有签到哦～～是否现在开始上班？</string>
+
+    <!--设置-->
+    <string name="set_user_info">个人信息</string>
+    <string name="set_msg_info">消息提醒</string>
+    <string name="set_track_info">足迹记录</string>
+    <string name="set_idea_str">意见反馈</string>
+    <string name="set_about">关于</string>
+    <string name="exit">退出</string>
+    <string name="change_user">切换用户</string>
+    <string name="record">我的上报</string>
+
+    <!--Http-->
+    <string name="http_request_failure">数据获取失败</string>
+    <string name="http_empty_str">暂无数据</string>
+    <string name="device_empty">设施不存在</string>
+
+    <!--task-->
+    <string name="task_detail">任务详情</string>
+    <string name="detail">详情</string>
+    <string name="time_line">时间轴</string>
+    <string name="location_and_file"><![CDATA[位置&附件]]></string>
+    <string name="task_no">任务编号</string>
+    <string name="task_resourse">任务来源</string>
+    <string name="task_type">任务类型</string>
+    <string name="task_complain_number">投诉单号</string>
+    <string name="task_conductor">处理人&#160;&#160;&#160;&#160;</string>
+    <string name="task_distributer">下单人&#160;&#160;&#160;&#160;</string>
+    <string name="task_remark">备注&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="task_list_normal">一般</string>
+    <string name="task_list_accept_tips">是否接收？</string>
+    <string name="task_list_accept_failure">接收失败</string>
+    <string name="task_list_back_tips">是否退回？</string>
+    <string name="task_list_back_failure">退回失败</string>
+    <string name="task_list_current_tips">设为当前，任务将不可退回，是否继续？</string>
+    <string name="task_list_current_failure">设为当前失败</string>
+    <string name="task_list_cannot_current">请执行完当前任务再进行其它任务</string>
+    <string name="dialog_tips">提示</string>
+    <string name="dialog_sure">确定</string>
+    <string name="dialog_cancel_">取消</string>
+    <string name="task_list_havebeen_back">已退回</string>
+    <string name="taskpoint_invalid">此任务点已失效</string>
+    <string name="taskpoint_list">任务点列表</string>
+    <string name="task_check">巡查</string>
+    <string name="task_get_info_failure">获取信息失败</string>
+    <string name="task_change_staus_success">成功</string>
+    <string name="task_look">查看</string>
+    <string name="task_click_again_later">请稍后再点击</string>
+    <string name="revoke_task_point_failure">失败</string>
+    <string name="colon_breaker">\t:</string>
+    <string name="check_up_facility">巡查设施</string>
+    <string name="maintain_facility">巡查设施</string>
+    <string name="dialog_please_select">请选择</string>
+    <string name="dialog_please_click_to_select">请点击选择</string>
+    <string name="task_detail_plan">计划任务:</string>
+    <string name="task_give_back_tips">请选择退回原因</string>
+    <string name="task_other">其它</string>
+    <string name="task_point_list_unfinished">未完成</string>
+    <string name="task_point_list_finished">已完成</string>
+    <string name="task_point_list_nodata_finished">暂无已完成任务</string>
+    <string name="task_point_list_nodata_unfinished">暂无未完成任务</string>
+    <string name="task_notice_dialog_title">任务通知</string>
+
+    <!--历史-->
+    <string-array name="his_tab">
+        <item>签到</item>
+        <!--<item>设施</item>-->
+        <item>隐患</item>
+        <!--<item>巡查</item>-->
+        <item>足迹</item>
+    </string-array>
+
+    <!--RecyclerView底部加载显示信息-->
+    <string name="recycler_view_item_foot_pullup">上拉加载更多...</string>
+    <string name="recycler_view_item_foot_loading">正在加载数据...</string>
+
+    <!--维护内容-->
+    <string-array name="maintain_content">
+        <item>维修阀门</item>
+        <item>处理消火栓被埋</item>
+        <item>维修消火栓</item>
+        <item>消火栓排放</item>
+        <item>补侧盖</item>
+        <item>补顶盖</item>
+        <item>刷油漆</item>
+        <item>更换阀杆</item>
+        <item>更换消火栓</item>
+        <item>其他项目</item>
+    </string-array>
+
+    <!--摄氏度符号-->
+    <string name="temp_symbol">&#176;C</string>
+
+</resources>

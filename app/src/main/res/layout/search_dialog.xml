@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="搜索"
+        android:background="@drawable/selector_btn_primary"
+        android:textColor="@color/white"
+        android:id="@+id/search_bt" />
+
+    <LinearLayout
+        android:id="@+id/search_Ll"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/btn_white_two"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/search_bt"
+        android:layout_toLeftOf="@+id/search_bt"
+        android:layout_alignParentLeft="true">
+
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height= "wrap_content"
+            android:src="@mipmap/btn_search_gray"/>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@null"
+            android:id="@+id/search_et"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="输入设施"
+            android:layout_toLeftOf="@+id/search_bt"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/key_ll"
+        android:layout_below="@id/search_Ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+    <!--<TextView-->
+        <!--android:layout_below="@+id/search_et"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/colorPrimary"/>-->
+</RelativeLayout>

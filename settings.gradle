@@ -1,0 +1,2 @@
+include ':app', ':ZN_Library_SDK', ':ZN_GreeDao_Generator', ':ZN_ArcGis_SDK', ':ZN_RFID_SDK', ':ZN_Baidu_SDK'
+//include ':Jpush_SDK';

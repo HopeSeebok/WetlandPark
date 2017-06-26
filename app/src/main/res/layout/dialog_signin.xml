@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="200dp">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_below="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/dialogContent_signIn_confirm"
+            android:layout_below="@id/divider"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认签到"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18"
+            android:paddingTop="@dimen/margin_5"
+            android:paddingBottom="@dimen/margin_5"
+            android:paddingLeft="@dimen/margin_20"
+            android:paddingRight="@dimen/margin_20"
+            android:background="@drawable/common_btn_bule_selector"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_marginLeft="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/divider"
+            android:layout_alignStart="@+id/divider">
+            <TextView
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_18"
+                android:text="签到点："/>
+            <TextView
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/margin_18"
+                android:text="签到人："/>
+            <TextView
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_18"
+                android:text="签到时间："/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/linearLayout"
+            android:layout_toEndOf="@+id/linearLayout">
+
+            <TextView
+                android:id="@+id/dialogContent_signInPoint"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_18"
+                android:maxLines="1"
+                android:text="空"/>
+            <TextView
+                android:id="@+id/dialogContent_userName"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/margin_18"
+                android:maxLines="1"
+                android:text="空"/>
+            <TextView
+                android:id="@+id/dialogContent_time"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/margin_18"
+                android:maxLines="1"
+                android:text="空"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

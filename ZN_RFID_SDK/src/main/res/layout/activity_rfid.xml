@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="#303F9F"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/rfid_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="45dip" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dip"
+                android:src="@drawable/ic_backarrow" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="结果"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="45dip" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/rfid_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>

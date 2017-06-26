@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        >
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mcv_showOtherDates="all"
+            app:mcv_selectionColor="@color/colorAccent"
+            android:background="@color/white"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calendarView"
+            android:gravity="center"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/margin_10">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:background="@drawable/common_btn_red_selector"
+                android:text="获取"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/track_query_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:background="@drawable/common_btn_red_selector"
+                android:text="查询轨迹"
+                android:layout_weight="2"
+                android:visibility="visible"
+                android:textColor="@color/white" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:background="@drawable/common_btn_red_selector"
+                android:text="获取"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/calendar_empty_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout"/>
+    </RelativeLayout>
+
+</LinearLayout>

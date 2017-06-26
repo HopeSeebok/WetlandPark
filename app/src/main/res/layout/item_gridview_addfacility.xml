@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:contentDescription="设施选择"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/margin_10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_facility_interpoint"
+            android:id="@+id/iv_item_grid_addfacility_img" />
+
+        <TextView
+            android:id="@+id/tv_item_grid_addfacility_name"
+            android:text="@string/action_settings"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/gray"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

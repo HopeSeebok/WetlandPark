@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yunwei.wetlandpark.view.OverScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="@string/task_resourse"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/task_form_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text=""
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="任务描述"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/task_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text=""
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="@string/task_distributer"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/order_people_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text=""
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="@string/task_conductor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/deal_people_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text=""
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:textSize="14sp"
+                android:id="@+id/taskpoint_id_label"
+                android:layout_marginLeft="25dp"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="目标编号" />
+
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/expand_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                expandableTextView:maxCollapsedLines="4">
+                <!--expandableTextView:animDuration="200"-->
+
+                <TextView
+                    android:id="@id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@id/expand_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:background="@android:color/transparent"
+                    android:padding="16dp" />
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="@string/task_remark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/taskdetailchildfragment_remark_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text=""
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</com.yunwei.wetlandpark.view.OverScrollView>

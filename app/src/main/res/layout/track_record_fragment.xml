@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/track_record_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingBottom="@dimen/margin_20"
+        android:paddingTop="@dimen/margin_20"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/track_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="00:00:00"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:gravity="center"
+                android:text="时长"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/track_distans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0.00"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:gravity="center"
+                android:text="距离(km)"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/track_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0.0"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:gravity="center"
+                android:text="均速(km/h)"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dip"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="@dimen/margin_10">
+
+            <LinearLayout
+                android:id="@+id/track_record_start_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/common_footmark_start_bj"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/start" />
+
+                <TextView
+                    android:id="@+id/track_record_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/track_start"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/track_record_resume_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_25"
+                android:background="@mipmap/common_footmark_start_bj"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:src="@mipmap/start" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:gravity="center"
+                    android:text="@string/track_continue"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/track_record_start_pause_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/common_footmark_pause_bj"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:src="@mipmap/pause" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:gravity="center"
+                    android:text="@string/track_pause"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/track_record_complete_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/common_footmark_end_bj"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:src="@mipmap/end" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:gravity="center"
+                    android:text="@string/track_complete"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
