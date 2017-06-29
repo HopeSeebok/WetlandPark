@@ -3,6 +3,8 @@ package com.yunwei.wetlandpark.ui.deviceFunctions.deviceFunction.signIn;
 import com.yunwei.wetlandpark.ui.deviceFunctions.deviceFunction.addDevice.data.DeviceInfo;
 import com.yunwei.wetlandpark.ui.view.BaseView;
 
+import java.util.List;
+
 /**
  * @author CBOK
  * @date 2016/12/16 13:56
@@ -23,7 +25,7 @@ public interface SignInContract {
     }
 
     interface Presenter{
-        void signIn();
+        void signIn(List<String> checkedDetails);
 
     }
 }

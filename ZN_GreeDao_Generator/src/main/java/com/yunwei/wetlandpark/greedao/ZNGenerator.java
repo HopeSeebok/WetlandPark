@@ -25,7 +25,7 @@ public class ZNGenerator {
     private static final String defaultOutDir = "././app/src/main/java";
 
     public static void main(String[] args) throws Exception {
-        Schema schema = new Schema(1, defaultJavaPackage);
+        Schema schema = new Schema(2, defaultJavaPackage);
 
 //        addNote(schema);
 //        addLogin(schema);
@@ -421,6 +421,8 @@ public class ZNGenerator {
         entity.addDoubleProperty("lng");
         entity.addDoubleProperty("lat");
         entity.addLongProperty("time");/* 时间*/
+        entity.addStringProperty("note");/*签到详情*/
         /*其它字段（请根据项目在下面添加）*/
+        entity.addStringProperty("test");
     }
 }

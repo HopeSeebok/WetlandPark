@@ -31,6 +31,8 @@ public class SignInTableDao extends AbstractDao<SignInTable, Long> {
         public final static Property Lng = new Property(5, Double.class, "lng", false, "LNG");
         public final static Property Lat = new Property(6, Double.class, "lat", false, "LAT");
         public final static Property Time = new Property(7, Long.class, "time", false, "TIME");
+        public final static Property Note = new Property(8, String.class, "note", false, "NOTE");
+        public final static Property Test = new Property(9, String.class, "test", false, "TEST");
     };
 
 
@@ -53,7 +55,9 @@ public class SignInTableDao extends AbstractDao<SignInTable, Long> {
                 "\"ADDRESS\" TEXT," + // 4: address
                 "\"LNG\" REAL," + // 5: lng
                 "\"LAT\" REAL," + // 6: lat
-                "\"TIME\" INTEGER);"); // 7: time
+                "\"TIME\" INTEGER," + // 7: time
+                "\"NOTE\" TEXT," + // 8: note
+                "\"TEST\" TEXT);"); // 9: test
     }
 
     /** Drops the underlying database table. */
@@ -106,6 +110,16 @@ public class SignInTableDao extends AbstractDao<SignInTable, Long> {
         if (time != null) {
             stmt.bindLong(8, time);
         }
+ 
+        String note = entity.getNote();
+        if (note != null) {
+            stmt.bindString(9, note);
+        }
+ 
+        String test = entity.getTest();
+        if (test != null) {
+            stmt.bindString(10, test);
+        }
     }
 
     /** @inheritdoc */
@@ -125,7 +139,9 @@ public class SignInTableDao extends AbstractDao<SignInTable, Long> {
             cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // address
             cursor.isNull(offset + 5) ? null : cursor.getDouble(offset + 5), // lng
             cursor.isNull(offset + 6) ? null : cursor.getDouble(offset + 6), // lat
-            cursor.isNull(offset + 7) ? null : cursor.getLong(offset + 7) // time
+            cursor.isNull(offset + 7) ? null : cursor.getLong(offset + 7), // time
+            cursor.isNull(offset + 8) ? null : cursor.getString(offset + 8), // note
+            cursor.isNull(offset + 9) ? null : cursor.getString(offset + 9) // test
         );
         return entity;
     }
@@ -141,6 +157,8 @@ public class SignInTableDao extends AbstractDao<SignInTable, Long> {
         entity.setLng(cursor.isNull(offset + 5) ? null : cursor.getDouble(offset + 5));
         entity.setLat(cursor.isNull(offset + 6) ? null : cursor.getDouble(offset + 6));
         entity.setTime(cursor.isNull(offset + 7) ? null : cursor.getLong(offset + 7));
+        entity.setNote(cursor.isNull(offset + 8) ? null : cursor.getString(offset + 8));
+        entity.setTest(cursor.isNull(offset + 9) ? null : cursor.getString(offset + 9));
      }
     
     /** @inheritdoc */

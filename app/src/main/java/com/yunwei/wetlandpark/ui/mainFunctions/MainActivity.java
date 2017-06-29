@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -68,6 +70,7 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
@@ -84,7 +87,7 @@ import cn.jpush.android.api.JPushInterface;
 
 public class MainActivity extends BaseActivity implements OnSingleTapListener, ArcGisBaseMapView.ArcGisMapListener,
         TapMapSearchContract.View, MainBottomNavigationBar.BottomTabSelectedListener, MainContract.View,
-        RFIDSearchContract.View, CheckAppVersionContract.View,SignInContract.View {
+        RFIDSearchContract.View, CheckAppVersionContract.View, SignInContract.View {
 
     private final int TAB_HOME = 0;
     //    private final int TAB_TASK = 1;
@@ -115,6 +118,7 @@ public class MainActivity extends BaseActivity implements OnSingleTapListener, A
 
 
     private Dialog mSignInDialog;
+    private SignInDetailsAdapter mSignInDetailsAdapter;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -182,7 +186,7 @@ public class MainActivity extends BaseActivity implements OnSingleTapListener, A
         mapView.setArcGisListener(this);
         mapView.addFeatureLayer(BuildConfig.DEVICE_LAYER_URL);
         String expression = "dangerstatus in (0,1)";
-        mapView.addFeatureLayer(BuildConfig.TROUBLE_LAYER_URL,expression);
+        mapView.addFeatureLayer(BuildConfig.TROUBLE_LAYER_URL, expression);
     }
 
     /**
@@ -195,8 +199,6 @@ public class MainActivity extends BaseActivity implements OnSingleTapListener, A
         mainBottomNavigationBar.setTabSelectedListener(this);
         mainBottomNavigationBar.setDefaultFragment(TAB_HOME);
     }
-
-
 
 
     /**
@@ -479,18 +481,24 @@ public class MainActivity extends BaseActivity implements OnSingleTapListener, A
     public void showDeviceInfo(DeviceInfo deviceInfo) {
         /*扫描成功，获取信息，展示Dialog*/
         mScanDeviceInfo = deviceInfo;
+        List<String> details = new ArrayList<>();
+        if (deviceInfo.getExt() != null) {
+            details = Arrays.asList(deviceInfo.getExt().split(","));
+        }
+        mSignInDetailsAdapter = new SignInDetailsAdapter(details);
         View view = LayoutInflater.from(this).inflate(R.layout.dialog_signin, null);
         TextView signInPoint = ButterKnife.findById(view, R.id.dialogContent_signInPoint);
         TextView userName = ButterKnife.findById(view, R.id.dialogContent_userName);
         TextView time = ButterKnife.findById(view, R.id.dialogContent_time);
         TextView confirm = ButterKnife.findById(view, R.id.dialogContent_signIn_confirm);
+        RecyclerView recyclerView = ButterKnife.findById(view, R.id.dialogContent_signIn_details_recyclerView);
 
-        if (deviceInfo != null) {
-            signInPoint.setText(deviceInfo.getCode());
-            userName.setText(ZNAPPlication.getUserInfoEntity().getName());
-            time.setText(IDateTimeUtils.formatDateHours(System.currentTimeMillis()));
-        }
-        if (mSignInDialog == null || !mSignInDialog.isShowing()){
+        signInPoint.setText(deviceInfo.getCode());
+        userName.setText(ZNAPPlication.getUserInfoEntity().getName());
+        time.setText(IDateTimeUtils.formatDateHours(System.currentTimeMillis()));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerView.setAdapter(mSignInDetailsAdapter);
+        if (mSignInDialog == null || !mSignInDialog.isShowing()) {
             mSignInDialog = DialogFactory.createDialog(this, "签到确认", view);
             mSignInDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
                 @Override
@@ -503,7 +511,7 @@ public class MainActivity extends BaseActivity implements OnSingleTapListener, A
                 public void onClick(View v) {
                     RFIDConfig.initReadLoop();
                     mSignInDialog.dismiss();
-                    mSignInPresenter.signIn();
+                    mSignInPresenter.signIn(mSignInDetailsAdapter.getCheckedDetails());
                 }
             });
         }
@@ -536,12 +544,12 @@ public class MainActivity extends BaseActivity implements OnSingleTapListener, A
 
     @Override
     public void showSignInSuccess() {
-        ToastUtil.showToast(this,"签到成功");
+        ToastUtil.showToast(this, "签到成功");
     }
 
     @Override
     public void showSignInFail() {
-        ToastUtil.showToast(this,"签到失败,请重新签到");
+        ToastUtil.showToast(this, "签到失败,请重新签到");
         showDeviceInfo(mScanDeviceInfo);
     }
 

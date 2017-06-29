@@ -1,11 +1,15 @@
 package com.yunwei.wetlandpark.ui.deviceFunctions.deviceFunction.signIn;
 
+import android.support.annotation.NonNull;
+
 import com.yunwei.wetlandpark.greedao.SignInTable;
 import com.yunwei.wetlandpark.ui.base.ZNAPPlication;
 import com.yunwei.wetlandpark.ui.deviceFunctions.deviceFunction.addDevice.data.DeviceInfo;
 import com.yunwei.wetlandpark.ui.deviceFunctions.deviceFunction.data.SignInfo;
 import com.yunwei.wetlandpark.ui.deviceFunctions.deviceFunction.data.source.DeviceDataSource;
 import com.yunwei.wetlandpark.utils.ILog;
+
+import java.util.List;
 
 /**
  * @author CBOK
@@ -18,6 +22,7 @@ public class SignInPresenter implements SignInContract.Presenter,DeviceDataSourc
     private DeviceDataSource mRepo;
     private SignInContract.View mView;
     private SignInfo mSignInfo;
+    private List<String> mCheckedDetails;
 
     public SignInPresenter(DeviceDataSource repo, SignInContract.View view) {
         mRepo = repo;
@@ -25,7 +30,8 @@ public class SignInPresenter implements SignInContract.Presenter,DeviceDataSourc
     }
 
     @Override
-    public void signIn() {
+    public void signIn(List<String> checkedDetails) {
+        mCheckedDetails = checkedDetails;
         mView.showLoadingDialog();
         mRepo.signIn(this);
     }
@@ -40,6 +46,7 @@ public class SignInPresenter implements SignInContract.Presenter,DeviceDataSourc
         signInTable.setTime(System.currentTimeMillis());
         signInTable.setUserID(ZNAPPlication.getUserInfoEntity().getId());
         signInTable.setUserName(ZNAPPlication.getUserInfoEntity().getName());
+        signInTable.setNote(getDetailsString().toString());
         try {
             ZNAPPlication.getDaoSession().getSignInTableDao().insert(signInTable);
             mView.showSignInSuccess();
@@ -65,6 +72,21 @@ public class SignInPresenter implements SignInContract.Presenter,DeviceDataSourc
         mSignInfo.setAddr(ZNAPPlication.getInstance().getCurrentAddr());
         mSignInfo.setLng(ZNAPPlication.getInstance().getX());
         mSignInfo.setLat(ZNAPPlication.getInstance().getY());
+        StringBuilder detail = getDetailsString();
+        mSignInfo.setNote(detail.toString());
         return mSignInfo;
+    }
+
+    @NonNull
+    private StringBuilder getDetailsString() {
+        StringBuilder detail = new StringBuilder();
+        if (mCheckedDetails.size() > 0) {
+            for (int i = 0; i < mCheckedDetails.size(); i++) {
+                detail.append(mCheckedDetails.get(i));
+                detail.append(",");
+            }
+            detail.deleteCharAt(detail.length()-1);
+        }
+        return detail;
     }
 }

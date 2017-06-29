@@ -19,6 +19,8 @@ import com.yunwei.wetlandpark.ui.biz.interfac.OnRecyclerViewItemLongClickListene
 import com.yunwei.wetlandpark.utils.ILog;
 import com.yunwei.library.dialog.DialogFactory;
 
+import static com.yunwei.map.widget.ArcGisBaseMapView.getDaoSession;
+
 /**
  * @author hezhiWu
  * @version V1.0
@@ -163,6 +165,6 @@ public class BaseHistoryFragment extends BaseFragment implements SwipeRefreshLay
     @Override
     public void onResume() {
         super.onResume();
-        onRefresh();
+//        onRefresh();
     }
 }

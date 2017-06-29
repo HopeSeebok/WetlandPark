@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         minSdkVersion 15
@@ -50,7 +50,7 @@ dependencies {
     /*图片显示PhotoView*/
     compile 'com.github.chrisbanes:PhotoView:1.2.6'
     /*七牛*/
-    compile 'com.qiniu:qiniu-android-sdk:7.3.+'
+    compile 'com.qiniu:qiniu-android-sdk:7.3.0'
     /*数据库GreenDao*/
     compile 'org.greenrobot:greendao:2.2.0'
 }

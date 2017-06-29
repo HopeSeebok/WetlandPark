@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.tencent.bugly.crashreport.CrashReport;
@@ -53,7 +54,6 @@ public class ZNAPPlication extends Application {
         IConfig.init(this);
         initBugly();
         instance = this;
-
         QiNiuConfig.iniConfig(BuildConfig.QINIU_DOMAIN, BuildConfig.QINIU_FILENAME);
 
 //        初始化jpush
@@ -65,6 +65,13 @@ public class ZNAPPlication extends Application {
             ISpfUtil.setValue(getContext(), Constants.TASK_VOICE_TIPS, true);
             ISpfUtil.setValue(getContext(), Constants.TASK_NOTICE_TIPS, true);
             ISpfUtil.setValue(getContext(), Constants.IS_FIRST_START, false);
+        }
+
+        if (daoSession == null) {
+            DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(instance, "CMCC", null);
+            DaoMaster daoMaster = new DaoMaster(helper.getWritableDatabase());
+            daoSession = daoMaster.newSession();
+            Log.e("GreenDao", "Application onCreate: ");
         }
     }
 

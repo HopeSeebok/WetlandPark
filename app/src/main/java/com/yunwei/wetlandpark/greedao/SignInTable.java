@@ -14,6 +14,8 @@ public class SignInTable implements java.io.Serializable {
     private Double lng;
     private Double lat;
     private Long time;
+    private String note;
+    private String test;
 
     public SignInTable() {
     }
@@ -22,7 +24,7 @@ public class SignInTable implements java.io.Serializable {
         this.id = id;
     }
 
-    public SignInTable(Long id, String userName, String userID, String code, String address, Double lng, Double lat, Long time) {
+    public SignInTable(Long id, String userName, String userID, String code, String address, Double lng, Double lat, Long time, String note, String test) {
         this.id = id;
         this.userName = userName;
         this.userID = userID;
@@ -31,6 +33,8 @@ public class SignInTable implements java.io.Serializable {
         this.lng = lng;
         this.lat = lat;
         this.time = time;
+        this.note = note;
+        this.test = test;
     }
 
     public Long getId() {
@@ -95,6 +99,22 @@ public class SignInTable implements java.io.Serializable {
 
     public void setTime(Long time) {
         this.time = time;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public String getTest() {
+        return test;
+    }
+
+    public void setTest(String test) {
+        this.test = test;
     }
 
 }

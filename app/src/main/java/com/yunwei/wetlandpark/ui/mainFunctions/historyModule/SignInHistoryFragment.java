@@ -5,6 +5,8 @@ import android.os.Message;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import com.yunwei.library.dialog.DialogFactory;
+import com.yunwei.wetlandpark.common.dialog.ToastUtil;
 import com.yunwei.wetlandpark.common.handler.HandlerValue;
 import com.yunwei.wetlandpark.greedao.SignInTable;
 import com.yunwei.wetlandpark.greedao.SignInTableDao;
@@ -57,10 +59,11 @@ public class SignInHistoryFragment extends BaseHistoryFragment{
         adapter.setOnItemClickListener(this);
         adapter.setOnItemLongClickListener(this);
         setAdapter(adapter);
-        refresh();
+//        refresh();
     }
 
     private void query(){
+        ZNAPPlication.getDaoSession().clear();
         List<SignInTable> tableList= ZNAPPlication.getDaoSession().getSignInTableDao().queryBuilder()
                 .orderDesc(SignInTableDao.Properties.Time).list();
         if (page == 0)
@@ -78,14 +81,14 @@ public class SignInHistoryFragment extends BaseHistoryFragment{
 
     @Override
     public void onItemClick(View view, Object data, int position) {
-//        Bundle bundle=new Bundle();
-//        bundle.putSerializable(Constants.KEY_BUNDLE_TROUBLE_TABLE,(SignInTable)data);
-//        ISkipActivityUtil.startIntent(getContext(), MakeTroubleActivity.class,bundle);
+//        ToastUtil.showToast(getContext(),((SignInTable)data).getNote());
+        DialogFactory.warningDialog(getContext(), "签到详情", ((SignInTable) data).getNote() == null || ((SignInTable) data).getNote().isEmpty() ? "暂无详情" : ((SignInTable) data).getNote().replace(",","\n"), null);
     }
 
 
     @Override
     public void longItemClickEvent(Object data, int position) {
+        ZNAPPlication.getDaoSession().clear();
         ZNAPPlication.getDaoSession().getSignInTableDao().delete((SignInTable) data);
         refresh();
     }

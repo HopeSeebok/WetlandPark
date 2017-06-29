@@ -22,6 +22,15 @@ public class SignInfo {
     private double Lng;
 
     private String Addr;
+    private String Note;
+
+    public String getNote() {
+        return Note;
+    }
+
+    public void setNote(String note) {
+        Note = note;
+    }
 
     public double getLat() {
         return Lat;
