@@ -66,6 +66,7 @@ public class HistoryFragment extends BaseFragment {
 
     private void initViewPager() {
         mViewPager.setAdapter(new HistoryFragmentAdapter(getChildFragmentManager(), getResources().getStringArray(R.array.his_tab)));
+        mViewPager.setOffscreenPageLimit(3);
         tabLayout.setupWithViewPager(mViewPager);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
         initTabView(tabLayout);

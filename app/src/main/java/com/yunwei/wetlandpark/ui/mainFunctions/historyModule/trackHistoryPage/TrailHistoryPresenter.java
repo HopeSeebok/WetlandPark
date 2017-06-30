@@ -63,13 +63,14 @@ public class TrailHistoryPresenter implements TrailHistoryContract.Presenter,
 //            /*查询网络*/
 //            mRepo.queryBaiduService(mStartTime,mEndTime,this);
 //        }
-
+//
         List<TrackPointsTable> list = ZNAPPlication.getDaoSession().getTrackPointsTableDao().queryBuilder()
                 .where(TrackPointsTableDao.Properties.CacheID.eq(mCacheID)).list();
         if (list != null && list.size() > 0) {
+            /*查询本地有数据*/
             mTable = list.get(0);
             if (System.currentTimeMillis() - endTime > 1000 * 60 * 60 * 6) {
-                //查询到本地数据，回调给mView
+                /*时间在6小时之后*/
                 mView.dismissLoadingDialog();
                 mView.showTrailResult(mTable.getCacheID());
             } else {

@@ -474,7 +474,10 @@ public class MainActivity extends BaseActivity implements OnSingleTapListener, A
      */
     private void showExitDialog() {
         DialogFactory.showMsgDialog(getActivity(), "提示", "确定要退出" + IUtils.getStrToRes(getActivity(), R.string.app_name) + "?",
-                v -> IActivityManage.getInstance().exit());
+                view -> {
+                    IActivityManage.getInstance().exit();
+                    System.exit(0);
+                });
     }
 
     @Override

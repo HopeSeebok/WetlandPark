@@ -145,7 +145,9 @@ public class MineFragment extends BaseFragment {
      */
     private void exitDialog() {
         DialogFactory.showMsgDialog(getActivity(), "提示", "确定要退出" + IUtils.getStrToRes(getActivity(), R.string.app_name) + "?",
-                v -> IActivityManage.getInstance().exit());
+                v -> {IActivityManage.getInstance().exit();
+                    System.exit(0);});
+
     }
 
     @Override

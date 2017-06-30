@@ -165,6 +165,6 @@ public class BaseHistoryFragment extends BaseFragment implements SwipeRefreshLay
     @Override
     public void onResume() {
         super.onResume();
-//        onRefresh();
+        onRefresh();
     }
 }

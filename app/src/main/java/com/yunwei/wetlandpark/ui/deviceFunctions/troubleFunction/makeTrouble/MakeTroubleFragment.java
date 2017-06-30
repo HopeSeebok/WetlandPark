@@ -71,6 +71,10 @@ public class MakeTroubleFragment extends FillBaseFragment implements MakeTrouble
             /*历史界面跳转*/
             initializeUIWidget();
             mTroubleTable = (TroubleTable) getArguments().getSerializable(Constants.KEY_BUNDLE_TROUBLE_TABLE);
+            if (mTroubleTable.getLng() > 0 && mTroubleTable.getLat() > 0) {
+                mLng = mTroubleTable.getLng();
+                mLat = mTroubleTable.getLat();
+            }
             validateUI();
         }
         return view;
