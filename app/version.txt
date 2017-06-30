@@ -4,8 +4,10 @@
    Version Content:
         1、第一次版本发布
 ====================================================================================================
-2、versionCode: ,versionName: ,dataBaseVersion:
-   Author:
-   Date:
+2、versionCode: 4, versionName:1.3.0, dataBaseVersion:2
+   Author: 陈浩波
+   Date: 2017-6-30
    Version Content:
-        1、XXXXXXXX
+        1、增加签到详情
+        2、修复足迹查询bug
+        3、修复隐患上报选择位置bug
